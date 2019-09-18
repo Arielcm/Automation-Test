@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-09-17T23:55:13 ART" name="Default suite" finished-at="2019-09-17T23:55:55 ART" duration-ms="42028">
+    <groups>
+    </groups>
+    <test started-at="2019-09-17T23:55:13 ART" name="Default test" finished-at="2019-09-17T23:55:55 ART" duration-ms="42028">
+      <class name="test.TestAutomation">
+        <test-method is-config="true" signature="inicializarBrowser()[pri:0, instance:test.TestAutomation@37918c79]" started-at="2019-09-17T23:55:14 ART" name="inicializarBrowser" finished-at="2019-09-17T23:55:25 ART" duration-ms="11100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inicializarBrowser -->
+        <test-method signature="MessageError(java.lang.String)[pri:0, instance:test.TestAutomation@37918c79]" started-at="2019-09-17T23:55:25 ART" name="MessageError" data-provider="Email" finished-at="2019-09-17T23:55:27 ART" duration-ms="2402" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[asd@asd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MessageError -->
+        <test-method is-config="true" signature="cerrarBrowser()[pri:0, instance:test.TestAutomation@37918c79]" started-at="2019-09-17T23:55:27 ART" name="cerrarBrowser" finished-at="2019-09-17T23:55:28 ART" duration-ms="677" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cerrarBrowser -->
+        <test-method is-config="true" signature="inicializarBrowser()[pri:0, instance:test.TestAutomation@37918c79]" started-at="2019-09-17T23:55:28 ART" name="inicializarBrowser" finished-at="2019-09-17T23:55:38 ART" duration-ms="10629" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inicializarBrowser -->
+        <test-method signature="MessageError(java.lang.String)[pri:0, instance:test.TestAutomation@37918c79]" started-at="2019-09-17T23:55:38 ART" name="MessageError" data-provider="Email" finished-at="2019-09-17T23:55:41 ART" duration-ms="2696" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[asdasd@asdasd.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MessageError -->
+        <test-method is-config="true" signature="cerrarBrowser()[pri:0, instance:test.TestAutomation@37918c79]" started-at="2019-09-17T23:55:41 ART" name="cerrarBrowser" finished-at="2019-09-17T23:55:42 ART" duration-ms="660" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cerrarBrowser -->
+        <test-method is-config="true" signature="inicializarBrowser()[pri:0, instance:test.TestAutomation@37918c79]" started-at="2019-09-17T23:55:42 ART" name="inicializarBrowser" finished-at="2019-09-17T23:55:52 ART" duration-ms="10691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inicializarBrowser -->
+        <test-method signature="MessageError(java.lang.String)[pri:0, instance:test.TestAutomation@37918c79]" started-at="2019-09-17T23:55:52 ART" name="MessageError" data-provider="Email" finished-at="2019-09-17T23:55:55 ART" duration-ms="2403" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MessageError -->
+        <test-method is-config="true" signature="cerrarBrowser()[pri:0, instance:test.TestAutomation@37918c79]" started-at="2019-09-17T23:55:55 ART" name="cerrarBrowser" finished-at="2019-09-17T23:55:55 ART" duration-ms="672" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cerrarBrowser -->
+      </class> <!-- test.TestAutomation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
