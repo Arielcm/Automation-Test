@@ -19,6 +19,7 @@ public class AutomationPracticeLogin extends AbstractPage {
 		emailtxt.sendKeys(mail);
 		emailtxt.sendKeys(Keys.TAB);
 		return control();
+		
 	}
 	
 	private boolean control() {
