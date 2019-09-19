@@ -10,21 +10,21 @@ import utils.SeleniumUtils;
 public class PageLoginAutomation extends AbstractPage {
 
 	@FindBy(id = "email_create")
-	WebElement emailtxt;
+	private WebElement emailtxt;
 	@FindBy(id="SubmitCreate")
-	WebElement btnCreate;
+	private WebElement btnCreate;
 	@FindBy(id = "email")
-	WebElement emailexisttxt;
+	private WebElement emailexisttxt;
 	@FindBy(id = "passwd")
-	WebElement passtxt;
+	private WebElement passtxt;
 	@FindBy(id="SubmitLogin")
-	WebElement btnlogin;
+	private WebElement btnlogin;
 	
 	public PageLoginAutomation(WebDriver driver) {
 		super(driver);
 	}
 	
-	public boolean mail_control(String mail) {
+	public boolean mailControl(String mail) {
 		utils.SeleniumUtils.esperarVisibilidadDelElemento(driver, emailtxt);
 		emailtxt.sendKeys(mail);
 		emailtxt.sendKeys(Keys.TAB);
@@ -42,14 +42,14 @@ public class PageLoginAutomation extends AbstractPage {
 		}
 	}
 	
-	public PageCreationAccount Create_Account(String email) {
+	public PageCreationAccount createAccount(String email) {
 		SeleniumUtils.esperarVisibilidadDelElemento(driver, emailtxt);
 		emailtxt.sendKeys(email);
 		btnCreate.click();
 		return new PageCreationAccount(driver);
 	}
 	
-	public Pageindexaccount Login_Exist_Accoount(String email, String pass) {
+	public Pageindexaccount loginExistAccoount(String email, String pass) {
 		SeleniumUtils.esperarVisibilidadDelElemento(driver, btnlogin);
 		emailexisttxt.sendKeys(email);
 		passtxt.sendKeys(pass);

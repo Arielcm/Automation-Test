@@ -4,19 +4,19 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 public class AddPersonas {
 
-	public String mail() {
-		String mailp=RandomStringUtils.randomAlphabetic(4)+"@";
-		mailp+=RandomStringUtils.randomAlphabetic(4)+".com";
+	public static String mail() {
+		String mailp = RandomStringUtils.randomAlphabetic(4) + "@";
+		mailp += RandomStringUtils.randomAlphabetic(4) + ".com";
 		return mailp;
 	}
-	
-	public String nombre() {
-		String nomp=RandomStringUtils.randomAlphabetic(4);
-		return nomp;
+
+	public static String nombre() {
+		return RandomStringUtils.randomAlphabetic(4);
+
 	}
-	
-	public String apellido() {
-		String app=RandomStringUtils.randomAlphabetic(5);
-		return app;
+
+	public static String apellido() {
+		return RandomStringUtils.randomAlphabetic(5);
+
 	}
 }

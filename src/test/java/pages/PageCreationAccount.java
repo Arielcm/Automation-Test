@@ -10,35 +10,35 @@ import utils.SeleniumUtils;
 public class PageCreationAccount extends AbstractPage {
 
 	@FindBy(id="id_gender1")
-	WebElement radio;
+	private WebElement radio;
 	@FindBy(id="customer_firstname")
-	WebElement nametxt;
+	private WebElement nametxt;
 	@FindBy(id="customer_lastname")
-	WebElement lastnametxt;
+	private WebElement lastnametxt;
 	@FindBy(id="passwd")
-	WebElement passtxt;
+	private WebElement passtxt;
 	@FindBy(id="address1")
-	WebElement addresstxt;
+	private WebElement addresstxt;
 	@FindBy(id="city")
-	WebElement citytxt;
+	private WebElement citytxt;
 	@FindBy(id="id_state")
-	WebElement state_select;
+	private WebElement stateSelect;
 	@FindBy(id="postcode")
-	WebElement postcodetxt;
+	private WebElement postcodetxt;
 	@FindBy(id="phone_mobile")
-	WebElement phonetxt;
+	private WebElement phonetxt;
 	@FindBy(id="submitAccount")
-	WebElement submitbtn;
+	private WebElement submitbtn;
 	public PageCreationAccount(WebDriver driver) {
 		super(driver);
 	}
 	
-	private void select_state() {
-		Select sel = new Select(state_select);
+	private void selectState() {
+		Select sel = new Select(stateSelect);
 		int numero = (int) (Math.random() * 49) + 1;
 		sel.selectByIndex(numero);
 	}
-	public Pageindexaccount Create_Account(String name,String lastname, String pass, String address, String city,String postcode,String phone) {
+	public Pageindexaccount createAccount(String name,String lastname, String pass, String address, String city,String postcode,String phone) {
 		SeleniumUtils.esperarVisibilidadDelElemento(driver, radio);
 		radio.click();
 		nametxt.sendKeys(name);
@@ -46,7 +46,7 @@ public class PageCreationAccount extends AbstractPage {
 		passtxt.sendKeys(pass);
 		addresstxt.sendKeys(address);
 		citytxt.sendKeys(city);
-		select_state();
+		selectState();
 		postcodetxt.sendKeys(postcode);
 		phonetxt.sendKeys(phone);
 		submitbtn.click();

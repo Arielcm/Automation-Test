@@ -7,9 +7,9 @@ import org.openqa.selenium.support.FindBy;
 public class Pageindexaccount extends AbstractPage {
 
 	@FindBy(className = "logout")
-	WebElement logoutlink;
+	private WebElement logoutlink;
 	@FindBy(className = "header_user_info")
-	WebElement userinfo;
+	private WebElement userinfo;
 	
 	public Pageindexaccount(WebDriver driver) {
 		super(driver);

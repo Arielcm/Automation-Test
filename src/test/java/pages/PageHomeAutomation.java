@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 public class PageHomeAutomation extends AbstractPage {
 
 	@FindBy(className = "login")
-	WebElement loginlink;
+	private WebElement loginlink;
 
 	
 	public PageHomeAutomation(WebDriver driver) {
