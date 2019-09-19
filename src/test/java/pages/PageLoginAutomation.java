@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,6 +24,24 @@ public class PageLoginAutomation extends AbstractPage {
 		super(driver);
 	}
 	
+	public boolean mail_control(String mail) {
+		utils.SeleniumUtils.esperarVisibilidadDelElemento(driver, emailtxt);
+		emailtxt.sendKeys(mail);
+		emailtxt.sendKeys(Keys.TAB);
+		return control();
+		
+	}
+	
+	private boolean control() {
+		String color=emailtxt.getCssValue("color");
+		if(color.equals("rgba(241, 51, 64, 1)")) {
+			return false;
+		}else {
+		return true;
+				
+		}
+	}
+	
 	public PageCreationAccount Create_Account(String email) {
 		SeleniumUtils.esperarVisibilidadDelElemento(driver, emailtxt);
 		emailtxt.sendKeys(email);
@@ -31,6 +50,7 @@ public class PageLoginAutomation extends AbstractPage {
 	}
 	
 	public Pageindexaccount Login_Exist_Accoount(String email, String pass) {
+		SeleniumUtils.esperarVisibilidadDelElemento(driver, btnlogin);
 		emailexisttxt.sendKeys(email);
 		passtxt.sendKeys(pass);
 		btnlogin.click();

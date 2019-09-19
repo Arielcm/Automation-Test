@@ -6,8 +6,8 @@
       <class name="test.TestAutomation">
         <methods>
           <include name="cerrarBrowser"/>
-          <include name="MessageError" invocation-numbers="0 1 2"/>
           <include name="inicializarBrowser"/>
+          <include name="Login_Correcto" invocation-numbers="1"/>
         </methods>
       </class> <!-- test.TestAutomation -->
     </classes>
