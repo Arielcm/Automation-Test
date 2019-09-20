@@ -14,6 +14,7 @@ import pages.PageCreationAccount;
 import pages.PageHomeAutomation;
 import pages.PageLoginAutomation;
 import pages.Pageindexaccount;
+import utils.AddPersonas;
 
 public class TestAutomation extends AbstractactTest {
 
@@ -44,15 +45,16 @@ public class TestAutomation extends AbstractactTest {
 	
 	//Registro de Usuarios
 	@Test(dataProvider = "Personas", dataProviderClass = utils.DataProviderClass.class)
-	public void createAccount(String email, String name,String lastname, String pass, String address, String city,String postcode,String phone) {
+	public void createAccount(AddPersonas persona) {
 		PageHomeAutomation home = new PageHomeAutomation(getDriver());
 		PageLoginAutomation login = home.loginclick();
-		PageCreationAccount create = login.createAccount(email);
-		Pageindexaccount indexaccount = create.createAccount(name, lastname, pass, address, city, postcode, phone);
+		PageCreationAccount create = login.createAccount(persona.getEmail());
+		Pageindexaccount indexaccount = create.createAccount(persona.getName(), persona.getLastname(), 
+				persona.getPass(), persona.getAddress(), persona.getCity(), persona.getPostcode(), persona.getPhone());
 		indexaccount.logoutclick();
-		login.loginExistAccoount(email, pass);
+		login.loginExistAccoount(persona.getEmail(), persona.getPass());
 		String namelogin = indexaccount.userinfo();
-		assertEquals(name +" "+lastname, namelogin);
+		assertEquals(persona.getName() +" "+persona.getLastname(), namelogin);
 
 	}
 	
