@@ -1,9 +1,6 @@
 package test;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-
-
 import static org.testng.Assert.assertEquals;
 
 
@@ -65,7 +62,7 @@ public class TestAutomation extends AbstractactTest {
 		PageLoginAutomation login = home.loginclick();
 		Pageindexaccount indexaccount= login.loginExistAccoount(email, pass);
 		String namelogin = indexaccount.userinfo();
-		AssertJUnit.assertEquals("Error en caso de Datos Incorrectos!",name +" "+lastname, namelogin);
+		assertEquals("Error en caso de Datos Incorrectos!",name +" "+lastname, namelogin);
 
 	}
 	
