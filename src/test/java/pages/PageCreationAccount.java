@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import utils.AddPersonas;
 
 import utils.SeleniumUtils;
 
@@ -38,17 +39,17 @@ public class PageCreationAccount extends AbstractPage {
 		int numero = (int) (Math.random() * 49) + 1;
 		sel.selectByIndex(numero);
 	}
-	public Pageindexaccount createAccount(String name,String lastname, String pass, String address, String city,String postcode,String phone) {
+	public Pageindexaccount createAccount(AddPersonas persona) {
 		SeleniumUtils.esperarVisibilidadDelElemento(driver, radio);
 		radio.click();
-		nametxt.sendKeys(name);
-		lastnametxt.sendKeys(lastname);
-		passtxt.sendKeys(pass);
-		addresstxt.sendKeys(address);
-		citytxt.sendKeys(city);
+		nametxt.sendKeys(persona.getName());
+		lastnametxt.sendKeys(persona.getLastname());
+		passtxt.sendKeys(persona.getPass());
+		addresstxt.sendKeys(persona.getAddress());
+		citytxt.sendKeys(persona.getCity());
 		selectState();
-		postcodetxt.sendKeys(postcode);
-		phonetxt.sendKeys(phone);
+		postcodetxt.sendKeys(persona.getPostcode());
+		phonetxt.sendKeys(persona.getPhone());
 		submitbtn.click();
 		return new Pageindexaccount(driver);
 		

@@ -46,8 +46,7 @@ public class TestAutomation extends AbstractactTest {
 		PageHomeAutomation home = new PageHomeAutomation(getDriver());
 		PageLoginAutomation login = home.loginclick();
 		PageCreationAccount create = login.createAccount(persona.getEmail());
-		Pageindexaccount indexaccount = create.createAccount(persona.getName(), persona.getLastname(), 
-				persona.getPass(), persona.getAddress(), persona.getCity(), persona.getPostcode(), persona.getPhone());
+		Pageindexaccount indexaccount = create.createAccount(persona);
 		indexaccount.logoutclick();
 		login.loginExistAccoount(persona.getEmail(), persona.getPass());
 		String namelogin = indexaccount.userinfo();

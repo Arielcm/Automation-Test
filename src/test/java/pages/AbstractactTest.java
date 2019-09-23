@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public abstract class AbstractactTest {
 
@@ -12,10 +11,11 @@ public abstract class AbstractactTest {
 
 	@BeforeMethod
 	public void inicializarBrowser() {
-		WebDriverManager.chromedriver().setup();
+		System.setProperty("webdriver.chrome.driver", "./resources/ChromeDriver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(getBaseUrl());
+
 	}
 	
 	@AfterMethod(alwaysRun = true)
