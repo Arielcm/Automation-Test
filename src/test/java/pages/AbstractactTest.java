@@ -5,13 +5,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public abstract class AbstractactTest {
 
 	private WebDriver driver;
 
 	@BeforeMethod
 	public void inicializarBrowser() {
-		System.setProperty("webdriver.chrome.driver", "./resources/ChromeDriver/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "./resources/ChromeDriver/chromedriver.exe");
+		WebDriverManager.chromedriver().setup();//Comentar esta linea Trafico-PC
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(getBaseUrl());

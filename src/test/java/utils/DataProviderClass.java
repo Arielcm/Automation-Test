@@ -1,6 +1,11 @@
 package utils;
 
+import java.util.List;
+
 import org.testng.annotations.DataProvider;
+
+import com.opencsv.exceptions.CsvDataTypeMismatchException;
+import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 
 public class DataProviderClass {
 
@@ -25,6 +30,15 @@ public class DataProviderClass {
 				new Object[] { "nPmP@zcuz.com", "asdasd", "nUjk", "FtrEX" },
 				new Object[] { "BWyA@CEnq.com", "TresNoseJose", "FbtB", "ipqeP" }, 
 				};
+	}
+	
+	// Datos para creacion de cuentas - Genera mail nombre y apellidos aleatorios - Tomados desde csv
+	@DataProvider(name = "Personascsv")
+	public static Object[] personascsv() throws CsvDataTypeMismatchException, CsvRequiredFieldEmptyException {
+		rwcsv.writecsv();
+		List<AddPersonas> personas = rwcsv.readcsv();
+		return new Object[] { personas.get(0), personas.get(1), personas.get(2) };
+	
 	}
 
 }

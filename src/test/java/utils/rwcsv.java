@@ -44,28 +44,29 @@ public class rwcsv {
 	}
 
 
-	public static void readcsv() {
+	public static List<AddPersonas>  readcsv() {
 		try {
 			Reader reader = Files.newBufferedReader(Paths.get(database));
 			CsvToBean<AddPersonas> csvToBean = new CsvToBeanBuilder<AddPersonas>(reader)
                     .withType(AddPersonas.class)
                     .withIgnoreLeadingWhiteSpace(true)
                     .build();
-			
+			 List<AddPersonas> csvpersonas = csvToBean.parse();
+			return csvpersonas;
+			 
+			/*
 			Iterator<AddPersonas> csvUserIterator = csvToBean.iterator();
 			while (csvUserIterator.hasNext()) {
 				AddPersonas persona = csvUserIterator.next();
                 System.out.println("Name : " + persona.getName());
-                System.out.println("Email : " + persona.getEmail());
-                System.out.println("PhoneNo : " + persona.getPhone());
-                System.out.println("Country : " + persona.getCity());
                 System.out.println("==========================");
             }
 			
-			
+			*/
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return null;
 	}
 }
