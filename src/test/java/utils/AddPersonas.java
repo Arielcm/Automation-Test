@@ -85,4 +85,46 @@ public class AddPersonas {
 		return phone;
 
 	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public void setPostcode(String postcode) {
+		this.postcode = postcode;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	@Override
+	public String toString() {
+		return "AddPersonas [email=" + email + ", name=" + name + ", lastname=" + lastname + ", pass=" + pass
+				+ ", address=" + address + ", city=" + city + ", postcode=" + postcode + ", phone=" + phone + "]";
+	}
+
+	
+	
+	
 }
